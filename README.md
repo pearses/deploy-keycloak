@@ -21,7 +21,12 @@ helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
 ```bash
 helm install my-ingress-nginx ingress-nginx/ingress-nginx -n ingress-nginx
 ```
-Erroring out? try 'kubectl delete ingressclass nginx' Before applying the above command again.
+```bash
+# Erroring out? try this before applying the above command again.
+kubectl delete ingressclass nginx
+
+```
+
 else
 ```bash
 export KUBECONFIG=~/.kube/config
