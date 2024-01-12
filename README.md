@@ -3,14 +3,22 @@
 ## Prerequisites
 #### Start minikube / add helm package
 ```bash
-minikube start \
-minikube addons enable ingress \
+minikube start
+```
+```bash
+minikube addons enable ingress
+```
+```bash
 helm repo add bitnami https://charts.bitnami.com/bitnami
 ```
 ```bash
 # when using minikube ingress addon ingress-nginx is already installed
-kubectl create namespace ingress-nginx \
-helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx \
+kubectl create namespace ingress-nginx 
+```
+```bash
+helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
+```
+```bash
 helm install ingress-nginx -n ingress-nginx 
 ```
 else
