@@ -19,8 +19,9 @@ kubectl create namespace ingress-nginx
 helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
 ```
 ```bash
-helm install ingress-nginx -n ingress-nginx 
+helm install my-ingress-nginx ingress-nginx/ingress-nginx -n ingress-nginx
 ```
+Erroring out? try 'kubectl delete ingressclass nginx' Before applying the above command again.
 else
 ```bash
 export KUBECONFIG=~/.kube/config
@@ -57,3 +58,15 @@ kubectl apply -n deployment -f keycloak-ingress.yaml
 ```bash
 minikube tunnel
 ```
+
+### Issues? Start again.
+```bash
+minikube stop
+```
+```bash
+minikube delete
+```
+
+# Minimum Configuration complete !
+
+## Checkout Keycloak is now available at [https://auth.localhost.](https://auth.localhost)
