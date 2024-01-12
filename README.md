@@ -35,7 +35,7 @@ kubectl create ns deployment
 
 #### Create TLS cert
 ```bash
-openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout auth-tls.key -out auth-tls.crt -subj "/CN=auth.localtest.me/O=deployment"
+openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout auth-tls.key -out auth-tls.crt -subj "/CN=auth.localhost/O=deployment"
 ```
 ```bash
 kubectl create secret -n deployment tls auth-tls-secret --key auth-tls.key --cert auth-tls.crt
